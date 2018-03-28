@@ -3,32 +3,33 @@ FROM centos:latest
 RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
     yum install yum-utils && \
-    yum-config-manager --enable remi-php70 && \
+    yum-config-manager --enable remi-php71 && \
     yum update -y && \
     yum install -y \
-    php70-php.x86_64 \
-    php70-php-bcmath.x86_64 \
-    php70-php-cli.x86_64 \
-    php70-php-common.x86_64 \
-    php70-php-devel.x86_64 \
-    php70-php-gd.x86_64 \
-    php70-php-intl.x86_64 \
-    php70-php-json.x86_64 \
-    php70-php-mbstring.x86_64 \
-    php70-php-mcrypt.x86_64 \
-    php70-php-mysqlnd.x86_64 \
-    php70-php-pdo.x86_64 \
-    php70-php-pear.noarch \
-    php70-php-xml.x86_64 \
-    php70-php-ast.x86_64 \
-    php70-php-opcache.x86_64 \
-    php70-php-pecl-zip.x86_64 \
-    php70-php-pecl-memcached.x86_64 && \
-    ln -s /usr/bin/php70 /usr/bin/php && \
-    ln -s /etc/opt/remi/php70/php.ini /etc/php.ini && \
-    ln -s /etc/opt/remi/php70/php.d /etc/php.d && \
-    ln -s /etc/opt/remi/php70/pear.conf /etc/pear.conf && \
-    ln -s /etc/opt/remi/php70/pear /etc/pear
+    php71-php.x86_64 \
+    php71-php-bcmath.x86_64 \
+    php71-php-cli.x86_64 \
+    php71-php-common.x86_64 \
+    php71-php-devel.x86_64 \
+    php71-php-gd.x86_64 \
+    php71-php-intl.x86_64 \
+    php71-php-json.x86_64 \
+    php71-php-mbstring.x86_64 \
+    php71-php-mcrypt.x86_64 \
+    php71-php-mysqlnd.x86_64 \
+    php71-php-pdo.x86_64 \
+    php71-php-pear.noarch \
+    php71-php-xml.x86_64 \
+    php71-php-ast.x86_64 \
+    php71-php-opcache.x86_64 \
+    php71-php-pecl-zip.x86_64 \
+    php71-php-pecl-mongodb.x86_64 \
+    php71-php-pecl-memcached.x86_64 && \
+    ln -s /usr/bin/php71 /usr/bin/php && \
+    ln -s /etc/opt/remi/php71/php.ini /etc/php.ini && \
+    ln -s /etc/opt/remi/php71/php.d /etc/php.d && \
+    ln -s /etc/opt/remi/php71/pear.conf /etc/pear.conf && \
+    ln -s /etc/opt/remi/php71/pear /etc/pear
 
 
 RUN yum install -y httpd-devel.x86_64 nano wget memcached git unzip
